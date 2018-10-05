@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <title>Document</title>
+</head>
+<body>
+
+{% for message in app.session.flashbag.get('info') %}
+   <div class="alert alert-info"> {{ message }}</div>
+{% endfor %}
+
+<ol class="list-group">
+{% for name,todo in app.session.get('todos') %}
+<div class="list-group-item">   {{ name }} : {{ todo }} </div>
+{% else %}
+    No todos Today
+{% endfor %}
+</ol>
+</body>
+</html>
+

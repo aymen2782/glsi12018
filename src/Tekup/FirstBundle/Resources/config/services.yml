@@ -1,0 +1,4 @@
+services:
+#    tekup_first.example:
+#        class: Tekup\FirstBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

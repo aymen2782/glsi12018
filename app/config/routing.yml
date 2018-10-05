@@ -1,0 +1,7 @@
+tekup_first:
+    resource: "@TekupFirstBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
